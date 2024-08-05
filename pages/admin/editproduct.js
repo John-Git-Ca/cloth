@@ -31,7 +31,7 @@ const ProductEditScreen = () => {
   // const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
 
-  const [query, setQuery] = useState('');
+  // const [query, setQuery] = useState('');
 
   const [image1, setImage1] = useState('');
   const [image2, setImage2] = useState('');
@@ -56,43 +56,43 @@ const ProductEditScreen = () => {
     }
   }, [userInfo, router]);
 
-  const getProductBySlug = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.post(
-        '/api/products/editproduct',
-        { search: query },
-        {
-          headers: { authorization: `Bearer ${userInfo.token}` },
-        }
-      );
-      setLoading(false);
-      //need details,
-      const { brand, category, countInStock, description, images, name, slug } =
-        data;
-      setBrand(brand);
-      // setCategory(category);
-      // setCountInStock(countInStock);
-      setDescription(description);
-      if (images[0]) setImage1(images[0]);
-      if (images[1]) setImage2(images[1]);
-      if (images[2]) setImage3(images[2]);
-      if (images[3]) setImage4(images[3]);
-      if (images[4]) setImage5(images[4]);
-      if (images[5]) setImage6(images[5]);
-      if (images[6]) setImage6(images[6]);
-      if (images[7]) setImage6(images[7]);
-      if (images[8]) setImage6(images[8]);
-      if (images[9]) setImage6(images[9]);
-      setName(name);
-      setSlug(slug);
-    } catch (error) {
-      setLoading(false);
-      setErrorMessage(
-        error.response.data ? error.response.data.message : error.message
-      );
-    }
-  };
+  // const getProductBySlug = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const { data } = await axios.post(
+  //       '/api/products/editproduct',
+  //       { search: query },
+  //       {
+  //         headers: { authorization: `Bearer ${userInfo.token}` },
+  //       }
+  //     );
+  //     setLoading(false);
+  //     //need details,
+  //     const { brand, category, countInStock, description, images, name, slug } =
+  //       data;
+  //     setBrand(brand);
+  //     // setCategory(category);
+  //     // setCountInStock(countInStock);
+  //     setDescription(description);
+  //     if (images[0]) setImage1(images[0]);
+  //     if (images[1]) setImage2(images[1]);
+  //     if (images[2]) setImage3(images[2]);
+  //     if (images[3]) setImage4(images[3]);
+  //     if (images[4]) setImage5(images[4]);
+  //     if (images[5]) setImage6(images[5]);
+  //     if (images[6]) setImage6(images[6]);
+  //     if (images[7]) setImage6(images[7]);
+  //     if (images[8]) setImage6(images[8]);
+  //     if (images[9]) setImage6(images[9]);
+  //     setName(name);
+  //     setSlug(slug);
+  //   } catch (error) {
+  //     setLoading(false);
+  //     setErrorMessage(
+  //       error.response.data ? error.response.data.message : error.message
+  //     );
+  //   }
+  // };
 
   const submitHandler = async () => {
     let images = [];

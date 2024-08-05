@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Navbar, Row, Col, Form, Image } from 'react-bootstrap';
-import { HiOutlineShoppingBag, HiShoppingBag } from 'react-icons/hi';
+import { Navbar, Row, Col, Form } from 'react-bootstrap';
 import Link from 'next/link';
 import { Store } from '../utils/Store';
 import { USER_LOGOUT } from '../constants/constants';
@@ -12,7 +11,7 @@ import { BsSearch } from 'react-icons/bs';
 const Header = () => {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
-  const { cart, userInfo } = state;
+  const {  userInfo } = state;
   const [keyword, setKeyword] = useState('');
   const logoutHandler = () => {
     dispatch({ type: USER_LOGOUT });

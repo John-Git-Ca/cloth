@@ -4,31 +4,28 @@ import ProductComponent from '../../../components/ProductComponent';
 import db from '../../../utils/db';
 import Product from '../../../models/Product';
 import Paginate from '../../../components/Paginate';
-import { useState } from 'react';
-import Selection from '../../../components/Selection';
-import { BRANDS } from '../../../constants/constants';
 import Message from '../../../components/Message';
 
 export default function ProductsPage(props) {
   const { products, pages, page, keyword } = props;
-  const [shopByCat, setShopByCat] = useState(
-    keyword === 'bags' || keyword === 'shoes' || keyword === 'clothes'
-      ? true
-      : false
-  );
-  const [shopByBrand, setShopByBrand] = useState(
-    keyword.substring(0, 6) === 'brand+' ? true : false
-  );
+  // const [shopByCat, setShopByCat] = useState(
+  //   keyword === 'bags' || keyword === 'shoes' || keyword === 'clothes'
+  //     ? true
+  //     : false
+  // );
+  // const [shopByBrand, setShopByBrand] = useState(
+  //   keyword.substring(0, 6) === 'brand+' ? true : false
+  // );
 
-  const handleShopByCat = () => {
-    setShopByCat(!shopByCat);
-    setShopByBrand(false);
-  };
+  // const handleShopByCat = () => {
+  //   setShopByCat(!shopByCat);
+  //   setShopByBrand(false);
+  // };
 
-  const handleShopByBrand = () => {
-    setShopByBrand(!shopByBrand);
-    setShopByCat(false);
-  };
+  // const handleShopByBrand = () => {
+  //   setShopByBrand(!shopByBrand);
+  //   setShopByCat(false);
+  // };
 
   return (
     <Layout title="products">
@@ -69,7 +66,7 @@ export default function ProductsPage(props) {
       >
         SHOP BY BRAND
       </button> */}
-      {shopByCat && (
+      {/* {shopByCat && (
         <div>
           <Selection
             active={keyword === 'all'}
@@ -110,7 +107,7 @@ export default function ProductsPage(props) {
             ))}
           </Col>
         </Row>
-      )}
+      )} */}
       <div className="text-center">
         <div className="d-inline"></div>
 

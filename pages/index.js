@@ -4,35 +4,35 @@ import ProductComponent from '../components/ProductComponent';
 import db from '../utils/db';
 import Product from '../models/Product';
 import Paginate from '../components/Paginate';
-import Selection from '../components/Selection';
-import { useState } from 'react';
-import { BRANDS } from '../constants/constants';
+// import Selection from '../components/Selection';
+// import { useState } from 'react';
+// import { BRANDS } from '../constants/constants';
 
 export default function Home(props) {
-  const [shopByCat, setShopByCat] = useState(false);
-  const [shopByBrand, setShopByBrand] = useState(false);
+  // const [shopByCat, setShopByCat] = useState(false);
+  // const [shopByBrand, setShopByBrand] = useState(false);
   const { products, pages, page, keyword } = props;
-  const speciallink10 = {
-    name: '百搭Link',
-    slug: 'speciallink10',
-    images: ['/images/speciallink10.jpg'],
-    price: '10',
-  };
-  const speciallink100 = {
-    name: '百搭Link',
-    slug: 'speciallink100',
-    images: ['/images/speciallink100.jpg'],
-    price: '100',
-  };
-  const handleShopByCat = () => {
-    setShopByCat(!shopByCat);
-    setShopByBrand(false);
-  };
+  // const speciallink10 = {
+  //   name: '百搭Link',
+  //   slug: 'speciallink10',
+  //   images: ['/images/speciallink10.jpg'],
+  //   price: '10',
+  // };
+  // const speciallink100 = {
+  //   name: '百搭Link',
+  //   slug: 'speciallink100',
+  //   images: ['/images/speciallink100.jpg'],
+  //   price: '100',
+  // };
+  // const handleShopByCat = () => {
+  //   setShopByCat(!shopByCat);
+  //   setShopByBrand(false);
+  // };
 
-  const handleShopByBrand = () => {
-    setShopByBrand(!shopByBrand);
-    setShopByCat(false);
-  };
+  // const handleShopByBrand = () => {
+  //   setShopByBrand(!shopByBrand);
+  //   setShopByCat(false);
+  // };
   return (
     <Layout title="products">
       <div>
@@ -56,7 +56,7 @@ export default function Home(props) {
         >
           SHOP BY BRAND
         </button> */}
-        {shopByCat && (
+        {/* {shopByCat && (
           <div>
             <Selection
               active={keyword === 'all'}
@@ -93,7 +93,7 @@ export default function Home(props) {
               ))}
             </Col>
           </Row>
-        )}
+        )} */}
         {/* <button
           onClick={() => setShopByBrand(!shopByBrand)}
           className={
