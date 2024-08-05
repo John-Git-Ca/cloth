@@ -1,0 +1,67 @@
+export const CART_ADD_ITEM = 'CART_ADD_ITEM';
+export const CART_REMOVE_ITEM = 'CART_REMOVE_ITEM';
+export const CART_CLEAR = 'CART_CLEAR';
+
+export const SAVE_SHIPPING_ADDRESS = 'SAVE_SHIPPING_ADDRESS';
+export const SAVE_PAYMENT_METHOD = 'SAVE_PAYMENT_METHOD';
+
+export const USER_LOGIN = 'USER_LOGIN';
+export const USER_LOGOUT = 'USER_LOGOUT';
+
+export const FETCH_REQUEST = 'FETCH_REQUEST';
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const FETCH_FAIL = 'FETCH_FAIL';
+
+export const UPLOAD_REQUEST = 'UPLOAD_REQUEST';
+export const UPLOAD_SUCCESS = 'UPLOAD_SUCCESS';
+export const UPLOAD_FAIL = 'UPLOAD_FAIL';
+
+export const PAY_REQUEST = 'PAY_REQUEST';
+export const PAY_SUCCESS = 'PAY_SUCCESS';
+export const PAY_FAIL = 'PAY_FAIL';
+export const PAY_RESET = 'PAY_RESET';
+
+export const DELIVER_REQUEST = 'DELIVER_REQUEST';
+export const DELIVER_SUCCESS = 'DELIVER_SUCCESS';
+export const DELIVER_FAIL = 'DELIVER_FAIL';
+export const DELIVER_RESET = 'DELIVER_RESET';
+
+export const BRANDS = [
+  'ALL',
+  'A.P.C.',
+  'ACNE STUDIOS',
+  'ALEXANDER MCQUEEN',
+  'BALENCIAGA',
+  'BALMAIN',
+  'BOTTEGA VENETA',
+  'BURBERRY',
+  'BY FAR',
+  'CELINE',
+  'CHLOÉ',
+  'FENDI',
+  'GIVENCHY',
+  'GOLDEN GOOSE',
+  'JACQUEMUS',
+  'JIMMY CHOO',
+  'JW ANDERSON',
+  'KENZO',
+  'LANVIN',
+  'LOEWE',
+  'LOUIS VUITTON',
+  'MAISON MARGIELA',
+  'MANU ATELIER',
+  'MARC JACOBS',
+  'MARNI',
+  'MONCLER',
+  'ROGER VIVIER',
+  'SELF PORTRAIT',
+  'STAUD',
+  'STELLA MCCARTNEY',
+  'THE ROW',
+  'THOM BROWNE',
+  "TOD'S",
+  'TOM FORD',
+  'VALENTINO',
+  'VEJA',
+  'VERSACE',
+];
