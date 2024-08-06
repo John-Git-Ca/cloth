@@ -8,7 +8,7 @@ const signToken = (user) => {
       email: user.email,
       isAdmin: user.isAdmin,
     },
-    process.env.JWT_SECRET,
+    'iamsecret',
     {
       expiresIn: '30d',
     }
@@ -19,7 +19,7 @@ const isAuth = async (req, res, next) => {
   const { authorization } = req.headers;
   if (authorization) {
     const token = authorization.slice(7, authorization.length);
-    jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
+    jwt.verify(token, 'iamsecret', (err, decode) => {
       if (err) {
         res
           .status(401)
