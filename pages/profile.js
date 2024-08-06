@@ -35,7 +35,7 @@ const ProfileScreen = () => {
       setMessage('');
       setDisableBtn(false);
     }
-  }, [password, confirmPassword]);
+  }, [password, confirmPassword,router, userInfo]);
 
   const submitHandler = async (e) => {
     e.preventDefault();

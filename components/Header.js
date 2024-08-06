@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext,  useState } from 'react';
 import { Navbar, Row, Col, Form } from 'react-bootstrap';
 import Link from 'next/link';
 import { Store } from '../utils/Store';
@@ -28,10 +28,6 @@ const Header = () => {
       router.push(keyword ? `/page/${keyword.trim()}/1` : `/page/all/1`);
     }
   };
-
-  useEffect(()=>{
-    console.log(userInfo)
-  },[])
 
   return (
     <Navbar className="border-bottom m-auto p-1 px-0 w-100">

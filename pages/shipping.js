@@ -76,7 +76,7 @@ const ShippingScreen = () => {
     if (!userInfo && redirect !== 'guest') {
       router.push('/login?redirect=/shipping');
     }
-  }, [recipient, address, city, country, paymentMethod]);
+  }, [recipient, address, city, country, paymentMethod, redirect, router, userInfo]);
   return (
     <Layout>
       <FormContainer>

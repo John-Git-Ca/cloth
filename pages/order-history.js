@@ -73,7 +73,7 @@ const OrderListScreen = () => {
       }
     };
     fetchOrders();
-  }, [userInfo]);
+  }, [userInfo, router]);
   return (
     <Layout title="Order History">
       <h1>My Orders</h1>

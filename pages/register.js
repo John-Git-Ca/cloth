@@ -56,7 +56,7 @@ const RegisterScreen = () => {
       setMessage2('Name or password has to be at least 8 characters');
     }
     setErrorMessage('');
-  }, [password, confirmPassword, name, email]);
+  }, [password, confirmPassword, name, email,router, userInfo]);
   return (
     <Layout>
       <FormContainer>

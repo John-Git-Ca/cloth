@@ -107,7 +107,7 @@ const OrderScreen = ({ params }) => {
         dispatch({ type: DELIVER_RESET });
       }
     }
-  }, [order, successPay, successDeliver]);
+  }, [order, successPay, successDeliver, orderId, router, userInfo]);
 
   const uploadFileHandler = async (e) => {
     const files = e.target.files;
